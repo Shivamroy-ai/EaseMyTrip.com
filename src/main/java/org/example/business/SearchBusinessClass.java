@@ -126,7 +126,7 @@ public class SearchBusinessClass {
             actions.moveToElement(elements.get(i)).build().perform();
 
             String airline=elements.get(i).getText();
-            if(airline.toUpperCase().replace(" ","").contentEquals(Airines.toUpperCase()))
+            if(airline.toUpperCase().replace(" ","").equalsIgnoreCase(Airines.toUpperCase()))
             {
                 WebElement selectOnly =SearchStepDefination.driver.findElement(By.xpath("(//div[@class=\"wid70 \"]//span/../..//div[@class=\"only\"])["+(i+1)+"]"));
 
